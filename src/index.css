@@ -1,0 +1,284 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Montserrat", sans-serif;
+}
+
+.header {
+  display: flex;
+  justify-content: start;
+  width: 100%;
+  background-color: white;
+  padding: 1.3rem 10rem;
+  border-bottom: 4px solid #ff5722;
+
+  @media screen and (max-width: 1024px) {
+    justify-content: center;
+  }
+}
+
+.header img {
+  width: 12rem;
+  cursor: pointer;
+}
+
+.formSection {
+  display: flex;
+  flex-direction: row;
+  padding: 0 2rem;
+  gap: 0 3rem;
+  width: 100%;
+  height: 100vh;
+
+  @media screen and (min-width: 786px) {
+    padding: 0 10rem;
+  }
+
+  @media screen and (max-width: 1024px) {
+    flex-direction: column;
+  }
+}
+
+.formSection .description {
+  display: flex;
+  flex-direction: column;
+  margin-top: 6rem;
+  width: 60%;
+
+  @media screen and (max-width: 1024px) {
+    width: 100%;
+  }
+}
+
+.formSection .description h1 {
+  font-size: 2.2rem;
+  font-weight: 900;
+  line-height: 3.5rem;
+  text-align: start;
+
+  @media screen and (max-width: 1024px) {
+    text-align: center;
+  }
+}
+
+.formSection .description ul {
+  margin-top: 2rem;
+
+  @media screen and (max-width: 452px) {
+    margin-top: 4rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  @media screen and (min-width: 452px) and (max-width: 1024px) {
+    margin-top: 4rem;
+    display: grid;
+    grid-template-columns: auto auto;
+    align-self: center;
+    gap: 1rem 4rem;
+  }
+}
+
+.formSection .description ul li {
+  margin-left: 1.1rem;
+  padding: 0.4rem 0.5rem;
+  font-style: italic;
+  font-weight: 600;
+  font-size: 1.1rem;
+  color: rgb(47, 45, 45);
+}
+
+.formSection .description ul li::marker {
+  font-style: normal;
+  content: "\f0a4";
+  font-family: FontAwesome;
+  font-size: 1.2rem;
+  color: #ff5722;
+}
+
+.formSection .description h1 span {
+  color: #0057dd;
+}
+
+.formSection .description .services {
+  display: flex;
+  gap: 4rem;
+  align-items: center;
+  text-align: center;
+  margin-top: 4rem;
+
+  @media screen and (max-width: 452px) {
+    margin-top: 4rem;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+  }
+
+  @media screen and (min-width: 452px) and (max-width: 1024px) {
+    justify-content: center;
+  }
+}
+
+.formSection .description .services img {
+  width: 3rem;
+}
+
+.formSection .description .services .image-overlay {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.formSection .description .services .image-overlay::before {
+  content: "";
+  position: absolute;
+  top: 55%;
+  left: 50%;
+  transform: translate(-50%, -65%);
+  height: 50px;
+  width: 100px;
+  border-radius: 150px 150px 0 0;
+  background-color: #92cbdf;
+  opacity: 0.4;
+}
+
+.formSection .description .services p {
+  margin-top: 1.8rem;
+  color: #0057dd;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.formSection .formDiv {
+  width: 34%;
+  height: fit-content;
+  padding: 1.8rem;
+  margin-top: 3rem;
+  box-shadow: 0px 0px 2px 2px rgb(237, 232, 232);
+  border-radius: 4px;
+
+  @media screen and (max-width: 1024px) {
+    width: 100%;
+    margin-top: 5rem;
+  }
+}
+
+.formSection .formDiv h3 {
+  text-transform: uppercase;
+  font-size: 1.3rem;
+  font-weight: 800;
+  color: #0057dd;
+}
+
+.formSection .formDiv form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin-top: 2.5rem;
+}
+
+.formSection .formDiv .input-div {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.formSection .formDiv .input-div label {
+  font-size: 0.8rem;
+  position: absolute;
+  left: 5%;
+  top: -18%;
+  background-color: white;
+  padding: 0 0.5rem 0 0.2rem;
+  font-weight: 600;
+  color: rgb(96, 92, 92);
+}
+
+.formSection .formDiv .input-div input {
+  padding: 0.8rem 1.2rem;
+  border-radius: 5px;
+  border: 2px solid rgb(96, 92, 92);
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.formSection .formDiv .checkbox-div {
+  display: flex;
+  gap: 0.8rem;
+  align-items: start;
+}
+
+.formSection .formDiv .checkbox-div input {
+  margin-top: 0.2rem;
+}
+
+.formSection .formDiv .checkbox-div p {
+  font-size: 0.8rem;
+}
+
+/* chrome hide */
+.formSection .formDiv .input-div input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+  -webkit-box-shadow: 0 0 0 30px white inset !important;
+}
+
+/* firefox hide */
+.formSection .formDiv .input-div input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+.formSection .formDiv form input:focus {
+  outline: none;
+}
+
+.formSection .formDiv .button {
+  align-self: center;
+  padding: 0.6rem 1.1rem;
+  font-weight: 600;
+  color: white;
+  border: none;
+  background: rgb(255, 87, 34);
+  background: linear-gradient(
+    110deg,
+    rgba(255, 87, 34, 1) 35%,
+    rgb(253, 114, 1) 100%
+  );
+  border-radius: 4px;
+  cursor: pointer;
+
+  @media screen and (max-width: 1024px) {
+    align-self: start;
+  }
+}
+
+.formSection .formDiv .loginDiv {
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  text-align: center;
+  gap: 1rem;
+
+  @media screen and (max-width: 1024px) {
+    align-self: start;
+    text-align: start;
+  }
+}
+
+.formSection .formDiv .loginDiv p {
+  font-weight: 700;
+  color: rgb(96, 92, 92);
+}
